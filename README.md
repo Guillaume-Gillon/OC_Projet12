@@ -23,7 +23,7 @@ Il est possible d'utiliser **pipenv** pour centraliser la gestion des modules, d
 ## 📦 Installation et exécution du programme
 
 <details>
-<summary>📍 **Etape 1 - Installer git**</summary><br>
+<summary>📍 Etape 1 - Installer git</summary><br>
 
 Pour télécharger ce programme, vérifiez que git est bien installé sur votre poste.<br>
 Vous pouvez l'installer en suivant les instructions fournies sur le site [git-scm.com](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
@@ -31,7 +31,7 @@ Vous pouvez l'installer en suivant les instructions fournies sur le site [git-sc
 </details>
 
 <details>
-<summary>📍 **Etape 2 - Cloner le dépôt contenant le programme**</summary><br>
+<summary>📍 Etape 2 - Cloner le dépôt contenant le programme</summary><br>
 
 
 Placez-vous dans le dossier souhaité et utilisez la commande suivante :
@@ -41,7 +41,7 @@ Placez-vous dans le dossier souhaité et utilisez la commande suivante :
 </details>
 
 <details>
-<summary>📍 **Etape 3 - Créer et activer un evironnement virtuel**</summary><br>
+<summary>📍 Etape 3 - Créer et activer un evironnement virtuel</summary><br>
 
 Créez un environnement virtuel avec la commande<br>
 ``python3 -m venv env``<br>
@@ -52,7 +52,7 @@ Activez cet environnement avec la commande<br>
 </details>
 
 <details>
-<summary>📍 **Etape 4 - Installer les dépendances**</summary><br>
+<summary>📍 Etape 4 - Installer les dépendances</summary><br>
 
 Pour que ce programme s'exécute, vous aurez besoin de plusieurs packages additionnels listés dans le fichier requirements.txt.<br>
 
@@ -62,20 +62,21 @@ Exécutez la commande <br>
 </details>
 
 <details>
-<summary>📍 **Etape 5 - Créer un utilisateur MySQL ayant des droits d'administration**</summary><br>
+<summary>📍 Etape 5 - Créer un utilisateur MySQL ayant des droits d'administration</summary><br>
 
 Connectez-vous en root à MySQL et exécutez les commandes suivantes : <br>
 ``CREATE USER 'admin_EpicEventsCRM'@'localhost' IDENTIFIED BY 'mot_de_passe';``<br>
 ``GRANT ALL PRIVILEGES ON *.* TO 'admin_EpicEventsCRM'@'localhost' WITH GRANT OPTION;``<br>
 ``FLUSH PRIVILEGES;``
 
+<br>
 > [!NOTE]
 > Remplacer 'mot_de_passe' par votre mot de passe fort
 
 </details>
 
 <details>
-<summary>📍 **Etape 6 - Initialisation de la base de données**</summary><br>
+<summary>📍 Etape 6 - Initialisation de la base de données</summary><br>
 
 Exécutez la commande suivante :<br>
 ``python3 install.py``
