@@ -81,6 +81,11 @@ Connectez-vous en root à MySQL et exécutez les commandes suivantes : <br>
 Exécutez la commande suivante :<br>
 ``python3 install.py``
 
+Dans le répertoire Config, créez un fichier sentry_config.env contenant la variable :
+``SENTRY_DSN="votre_dsn_sentry"``
+
+> Remplacer 'votre_dsn_sentry' par celui qui vous a été fourni par sentry.
+
 </details>
 
 <details>
