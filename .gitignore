@@ -1,0 +1,6 @@
+env
+*.env
+UML.docx
+__pycache__
+Presentation.pptx
+Presentation.pdf
