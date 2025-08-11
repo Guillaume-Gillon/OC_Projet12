@@ -82,7 +82,7 @@ Exécutez la commande suivante :<br>
 </details>
 
 <details>
-<summary>📍 **Etape 7 - Exécution de l'application**</summary><br>
+<summary>📍 Etape 7 - Exécution de l'application</summary><br>
 
 Exécutez la commande suivante :<br>
 ``python3 main.py``
