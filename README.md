@@ -100,6 +100,9 @@ Exécutez la commande suivante :<br>
 
 L'application comporte différentes sections accessibles sur permission. Le détail de ces permissions est disponible dans le cahier des charges.
 <br><br>
+> [!NOTE]
+>La validité du jeton de connexion persistante est réglée à 2 minutes.
+>Ce paramètre est modifiable dans get_valid_duration() du fichier Controller.jwt_manager
 
 ## 🗑 Désinstallation
 
