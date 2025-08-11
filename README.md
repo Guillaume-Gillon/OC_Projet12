@@ -105,7 +105,7 @@ L'application comporte différentes sections accessibles sur permission. Le dét
 
 Pour désinstaller le programme, exécuter la commande suivante :<br>
 ``python3 uninstall.py``
-<br>
+<br><br>
 Le script de désinstallation supprimera les éléments suivants :
 - Utilisateur user_EpicEventsCRM de MySQL
 - Fichier de configuration de user_EpicEventsCRM
