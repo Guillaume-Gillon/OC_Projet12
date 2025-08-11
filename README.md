@@ -69,8 +69,6 @@ Connectez-vous en root à MySQL et exécutez les commandes suivantes : <br>
 ``GRANT ALL PRIVILEGES ON *.* TO 'admin_EpicEventsCRM'@'localhost' WITH GRANT OPTION;``<br>
 ``FLUSH PRIVILEGES;``
 
-<br>
-> [!NOTE]
 > Remplacer 'mot_de_passe' par votre mot de passe fort
 
 </details>
