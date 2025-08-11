@@ -41,7 +41,7 @@ Placez-vous dans le dossier souhaité et utilisez la commande suivante :
 </details>
 
 <details>
-<summary>📍 Etape 3 - Créer et activer un evironnement virtuel</summary>
+<summary>📍 Etape 3 - Créer et activer un evironnement virtuel</summary><br>
 
 Créez un environnement virtuel avec la commande<br>
 ``python3 -m venv env``<br>
@@ -52,7 +52,7 @@ Activez cet environnement avec la commande<br>
 </details>
 
 <details>
-<summary>📍 Etape 4 - Installer les dépendances</summary>
+<summary>📍 Etape 4 - Installer les dépendances</summary><br>
 
 Pour que ce programme s'exécute, vous aurez besoin de plusieurs packages additionnels listés dans le fichier requirements.txt.<br>
 
