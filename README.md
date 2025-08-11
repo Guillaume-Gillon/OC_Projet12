@@ -65,8 +65,8 @@ Exécutez la commande <br>
 <summary>📍 Etape 5 - Créer un utilisateur MySQL ayant des droits d'administration</summary><br>
 
 Connectez-vous en root à MySQL et exécutez les commandes suivantes : <br>
-``CREATE USER 'admin_EpicEventsCRM'@'localhost' IDENTIFIED BY 'mot_de_passe';``
-``GRANT ALL PRIVILEGES ON *.* TO 'admin_EpicEventsCRM'@'localhost' WITH GRANT OPTION;``
+``CREATE USER 'admin_EpicEventsCRM'@'localhost' IDENTIFIED BY 'mot_de_passe';``<br>
+``GRANT ALL PRIVILEGES ON *.* TO 'admin_EpicEventsCRM'@'localhost' WITH GRANT OPTION;``<br>
 ``FLUSH PRIVILEGES;``
 
 **Remplacer 'mot_de_passe' par votre mot de passe fort**
