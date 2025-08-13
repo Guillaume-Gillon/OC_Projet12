@@ -15,7 +15,7 @@ def new_contact(session, contact_department, role, actual_contact):
             if index_selected_user is None:
                 return None
             return False
-        new_contact = users[index_selected_user]
+        new_contact = users[index_selected_user - 1]
         return new_contact
     return None
 

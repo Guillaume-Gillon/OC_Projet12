@@ -144,7 +144,7 @@ def menu_select_department_user(entries, contact_department, actual_contact):
         menu_title = f"SELECTIONNEZ LE NOM DU NOUVEAU {contact_department} (Contact actuel : Aucun)"
     entries.insert(0, "Retour")
     selected_entry = load_menu(entries, menu_title)
-    if selected_entry == "Retour":
+    if entries[selected_entry] == "Retour":
         return False
     return selected_entry
 
