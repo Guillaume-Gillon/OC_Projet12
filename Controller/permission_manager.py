@@ -5,6 +5,7 @@ import functools
 
 def permission_required(permission, payload_required=False):
     def decorator(func):
+        # copie des métadonnées de la fonction d'origine (nom de fonction d'origine, docstrings...)
         @functools.wraps(func)
         def wrapper(auth_token, *args, **kwargs):
             if not auth_token:
@@ -14,7 +15,7 @@ def permission_required(permission, payload_required=False):
                 return None
             payload = jwt_manager.decode_jwt(auth_token)
             if not payload or permission not in payload.get("permissions", []):
-                display_message(f"Accès refusé.")
+                display_message("Accès refusé.")
                 return None
 
             # Si tout est bon, on appelle la fonction

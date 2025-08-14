@@ -169,7 +169,9 @@ def modify_user(session, actual_user):
 
                     role_name = [role_name_to_remove]
                     if verify_attached_elements(user, role_name):
-                        if not attach_elements_to_unassigned_user(session, user):
+                        if not attach_elements_to_unassigned_user(
+                            session, user, list(role_name)
+                        ):
                             return False
 
                     for role in user.roles:
@@ -218,7 +220,7 @@ def delete_user(session, actual_user):
         ):
             roles_names = [role.name for role in user.roles]
             if verify_attached_elements(user, roles_names):
-                if attach_elements_to_unassigned_user(session, user):
+                if attach_elements_to_unassigned_user(session, user, roles_names):
                     session.delete(user)
                     if db_manager.commit_changes_to_db(session):
                         return True
@@ -241,18 +243,24 @@ def verify_attached_elements(user, role):
     return data_found
 
 
-def attach_elements_to_unassigned_user(session, user):
+def attach_elements_to_unassigned_user(session, user, role_names=[]):
     if menu.menu_yes_no(
         "Les éléments assignés vont être détachés de l'utilisateur sélectionné. Souhaitez-vous continuer ?"
     ):
         unassigned_user = db_manager.load_unassigned_user(session)
-        for client in user.clients:
-            client.commercial_contact = unassigned_user
-        for contract in user.contracts:
-            contract.commercial_contact = unassigned_user
-        for event in user.events:
-            event.support_contact = unassigned_user
-        return True
+        role_unassigned = False
+        if "commercial" in role_names:
+            for client in user.clients:
+                client.commercial_contact = unassigned_user
+                role_unassigned = True
+            for contract in user.contracts:
+                contract.commercial_contact = unassigned_user
+                role_unassigned = True
+        if "support" in role_names:
+            for event in user.events:
+                event.support_contact = unassigned_user
+                role_unassigned = True
+        return role_unassigned
     return False
 
 
